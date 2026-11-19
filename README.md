@@ -10,7 +10,7 @@
 
 ## 1. What This Project Is About
 
-For my Computer Vision project, i decided taking an existing medical imaging research paper, critically analyzing its methodology, and developing genuine technical improvements. 
+For my Computer Vision project, i decided to take an existing medical imaging research paper, critically analyzing its methodology, and developing genuine technical improvements. 
 
 The paper I started with is Kasuya et al. (2023), published in the *Polish Journal of Radiology*. Their premise was interesting: fat-suppressed MRI scans are essential for spotting joint fluid, bone bruises, and ligament tears, but physical fat-suppression sequences often suffer from magnetic field artifacts or aren't captured. The authors tried to solve this by training generative networks to create artificial fat-suppressed scans from standard non-fat-suppressed scans, then subtracting them to highlight abnormalities.
 
