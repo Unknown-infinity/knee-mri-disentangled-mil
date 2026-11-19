@@ -1,6 +1,6 @@
 # Automated Knee MRI Abnormality Detection using Multi-Plane Disentangled Attention MIL
 
-**Author:** Armaan Sinha ,Aryan Jain
+**Author:** Armaan Sinha,Aryan Jain
 
 **Department:** Computer Science and Engineering, Netaji Subhas University of Technology
 
