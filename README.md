@@ -146,9 +146,6 @@ knee-mri-disentangled-mil/
 │   ├── fig_gradcam_overlay.png
 │   ├── fig_multiplane_sample.png
 │   └── fig_roc_pr.png
-├── checkpoints/                     # Model weights directory (tracked via .gitignore)
-│   ├── best_multiplane_mil.pth      # V1 baseline checkpoint
-│   └── best_multiplane_v2.pth       # V2 proposed checkpoint
 ├── src/                             # Clean, modular Python implementation
 │   ├── data_utils.py                # MRNet dataset discovery and stratified splitting
 │   ├── dataset.py                   # PyTorch volumetric loaders (V1 & V2 with 3D aug)
@@ -162,6 +159,8 @@ knee-mri-disentangled-mil/
 ├── requirements.txt                 # Exact package versions
 └── README.md
 ```
+
+> **Note on Model Weights:** In accordance with standard machine learning repository practices and GitHub's 100 MB file limit, binary `.pth` model weights (~135 MB each) are not committed to Git. The interactive notebook `mrnet-disentangled-mil.ipynb` contains the complete executed outputs and evaluation logs. You can also train fresh weights locally or on Kaggle using the commands below.
 
 ---
 
@@ -207,15 +206,15 @@ To train both the V1 baseline and the V2 proposed network and print the comparis
 python src/train.py --mrnet-root "$MRNET_ROOT" --epochs-v1 15 --epochs-v2 12
 ```
 
-If you already have trained weights in `checkpoints/best_multiplane_v2.pth` and only want to train V2:
+If you already have saved weights (`best_multiplane_v2.pth`) and only want to train V2:
 ```bash
 python src/train.py --mrnet-root "$MRNET_ROOT" --skip-v1 --epochs-v2 12
 ```
 
 #### 4. Evaluating & Generating Plots
-To run standalone inference on the 120-patient held-out test cohort and generate all curves and confusion matrices:
+To run standalone inference on the 120-patient held-out test cohort using a saved checkpoint:
 ```bash
-python src/evaluate.py --mrnet-root "$MRNET_ROOT" --checkpoint checkpoints/best_multiplane_v2.pth --output-dir results/
+python src/evaluate.py --mrnet-root "$MRNET_ROOT" --checkpoint best_multiplane_v2.pth --output-dir results/
 ```
 
 ---

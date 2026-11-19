@@ -185,7 +185,7 @@ def plot_attention(test_y, test_p, test_attns, test_sags, output_dir):
 def main():
     parser = argparse.ArgumentParser(description="Evaluate V2 model and generate figures.")
     parser.add_argument("--mrnet-root",  type=str, default=None)
-    parser.add_argument("--checkpoint",  type=str, default="checkpoints/best_multiplane_v2.pth",
+    parser.add_argument("--checkpoint",  type=str, default="best_multiplane_v2.pth",
                         help="Path to trained V2 checkpoint (.pth)")
     parser.add_argument("--output-dir",  type=str, default="results")
     args = parser.parse_args()
