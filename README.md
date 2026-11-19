@@ -1,7 +1,8 @@
 # Automated Knee MRI Abnormality Detection using Multi-Plane Disentangled Attention MIL
 
 **Course Project:** Computer Vision  
-**Author:** Armaan Sinha ,Aryan Jain 
+**Author:** Armaan Sinha ,Aryan Jain
+
 **Department:** Computer Science and Engineering, Netaji Subhas University of Technology 
 **Base Research Paper:** Kasuya et al., *"Feasibility of the fat-suppression image-subtraction method using deep learning for abnormality detection on knee MRI."* Polish Journal of Radiology, 2023. [DOI: 10.5114/pjr.2023.133660](https://doi.org/10.5114/pjr.2023.133660)
 
